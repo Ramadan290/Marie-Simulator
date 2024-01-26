@@ -1,0 +1,25 @@
+﻿INPUT
+STORE X
+INPUT
+STORE Y
+
+loop, Load X
+If, Subt Y
+    Skipcond 000
+    Jump Else
+Then, Jump Endif
+Else, Store X
+    Load Counter
+    Add One
+    Store Counter
+    Jump loop
+Endif, Load Counter
+Output
+Load X
+Output
+HALT
+
+X, Dec 0
+Y, Dec 0
+Counter, Dec 0
+One, Dec 1

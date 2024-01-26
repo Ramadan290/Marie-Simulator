@@ -1,0 +1,41 @@
+     Assembly listing for: Dividing Two Numbers using Subtraction.mas
+                Assembled: Sat Jun 03 05:40:44 EET 2023
+
+000 5000 |          INPUT              
+001 2011 |          STORE A            
+002 5000 |          INPUT              
+003 2012 |          STORE B            
+004 1011 |          LOAD A             
+005 8800 |          SKIPCOND 800       
+006 9010 |          JUMP Endloop       
+007 4012 |  Loop    SUBT B             
+008 2011 |          STORE A            
+009 1013 |          LOAD X             
+00A 3014 |          ADD One            
+00B 2013 |          STORE X            
+00C 1011 |          LOAD A             
+00D 8400 |          SKIPCOND 400       
+00E 9007 |          JUMP Loop          
+00F 1013 |          LOAD X             
+010 7000 |  Endloop HALT               
+         |                            
+011 0000 |  A       DEC 0              
+012 0000 |  B       DEC 0              
+013 0000 |  X       DEC 0              
+014 0001 |  One     DEC 1              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          A       |   011   | 001, 004, 008, 00C
+          B       |   012   | 003, 007
+          Endloop |   010   | 006
+          Loop    |   007   | 00E
+          One     |   014   | 00A
+          X       |   013   | 009, 00B, 00F
+         ---------------------------------------------------
+
+

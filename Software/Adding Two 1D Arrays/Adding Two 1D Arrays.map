@@ -1,0 +1,14 @@
+ -----------------
+ Symbol | Location
+ -------+---------
+ Addr1  |   022
+ Addr2  |   023
+ Addr3  |   024
+ Ctr    |   02A
+ Num    |   028
+ One    |   029
+ Ptr1   |   025
+ Ptr2   |   026
+ Ptr3   |   027
+ loop   |   009
+

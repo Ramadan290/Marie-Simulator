@@ -1,0 +1,77 @@
+     Assembly listing for: Adding Two 1D Arrays.mas
+                Assembled: Sat Jun 03 05:31:30 EET 2023
+
+000 1022 |         LOAD Addr1        
+001 2025 |         STORE Ptr1        
+002 1023 |         LOAD Addr2        
+003 2026 |         STORE Ptr2        
+004 1024 |         LOAD Addr3        
+005 2027 |         STORE Ptr3        
+006 1028 |         LOAD Num          
+007 4029 |         SUBT One          
+008 202A |         STORE Ctr         
+009 1025 |  loop   LOAD Ptr1         
+00A B026 |         ADDI Ptr2         
+00B 2027 |         STORE Ptr3        
+00C 6000 |         OUTPUT            
+00D 1025 |         LOAD Ptr1         
+00E 3029 |         ADD One           
+00F 2025 |         STORE Ptr1        
+010 1026 |         LOAD Ptr2         
+011 3029 |         ADD One           
+012 2026 |         STORE Ptr2        
+013 1027 |         LOAD Ptr3         
+014 3029 |         ADD One           
+015 2027 |         STORE Ptr3        
+016 102A |         LOAD Ctr          
+017 4029 |         SUBT One          
+018 202A |         STORE Ctr         
+019 4029 |         SUBT One          
+01A 202A |         STORE Ctr         
+01B 8000 |         SKIPCOND 000      
+01C 9009 |         JUMP loop         
+         |                                
+01D 7000 |         HALT              
+01E 202A |         STORE Ctr         
+01F 8000 |         SKIPCOND 000      
+020 9009 |         JUMP loop         
+021 7000 |         HALT              
+022 0026 |  Addr1  HEX 026           
+023 005B |  Addr2  HEX 05B           
+024 008C |  Addr3  HEX 08C           
+025 0000 |  Ptr1   HEX 0             
+026 0000 |  Ptr2   HEX 0             
+027 0000 |  Ptr3   HEX 0             
+028 0005 |  Num    DEC 5             
+029 0001 |  One    DEC 1             
+02A 0000 |  Ctr    DEC 0             
+02B 0003 |         DEC 3             
+02C 0004 |         DEC 4             
+02D 0005 |         DEC 5             
+02E 0007 |         DEC 7             
+02F 0002 |         DEC 2             
+030 0009 |         DEC 9             
+031 0000 |         DEC 0             
+032 0000 |         DEC 0             
+033 0000 |         DEC 0             
+         |                              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          Addr1  |   022   | 000
+          Addr2  |   023   | 002
+          Addr3  |   024   | 004
+          Ctr    |   02A   | 008, 016, 018, 01A, 01E
+          Num    |   028   | 006
+          One    |   029   | 007, 00E, 011, 014, 017, 019
+          Ptr1   |   025   | 001, 009, 00D, 00F
+          Ptr2   |   026   | 003, 00A, 010, 012
+          Ptr3   |   027   | 005, 00B, 013, 015
+          loop   |   009   | 01C, 020
+         --------------------------------------------------
+
+

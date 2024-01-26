@@ -1,0 +1,54 @@
+      Load Addr1
+      Store Ptr1
+      Load Addr2
+      Store Ptr2
+      Load Addr3
+      Store Ptr3
+      Load Num
+      Subt One
+      Store Ctr
+loop, Load Ptr1
+      Subt Ptr2
+      Store Ptr3
+      Output
+      Load Ptr1
+      Add One
+      Store Ptr1
+      Load Ptr2
+      Add One
+      Store Ptr2
+      Load Ptr3
+      Add One
+      Store Ptr3
+      Load Ctr
+      Subt One 
+      Store Ctr
+      Subt One
+      Store Ctr
+      Skipcond 000
+      Jump loop
+      
+      Halt
+      Store Ctr
+      Skipcond 000
+      Jump loop
+      Halt
+Addr1, HEX 026
+Addr2, HEX 05B
+Addr3, HEX 08C 
+Ptr1, HEX 0
+Ptr2, HEX 0
+Ptr3, HEX 0
+Num, Dec 5
+One, Dec 1
+Ctr, Dec 0
+     Dec 3
+     Dec 4
+     Dec 5
+     Dec 7
+     Dec 2
+     Dec 9
+     Dec 0
+     Dec 0
+     Dec 0
+    

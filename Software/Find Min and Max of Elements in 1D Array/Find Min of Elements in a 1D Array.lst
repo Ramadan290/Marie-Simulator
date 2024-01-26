@@ -1,0 +1,113 @@
+     Assembly listing for: Find Min of Elements in a 1D Array.mas
+                Assembled: Sat Jun 03 05:03:07 EET 2023
+
+000 1040 |  LOOP       LOAD X                
+001 403E |             SUBT TEN              
+002 8000 |             SKIPCOND 000         /if X = 10
+003 9029 |             JUMP LOOP2           /take average after X = 10;
+         |                                  
+004 A000 |             CLEAR                /BEGIN INPUTING NUMBERS FOR AVERAGE
+005 5000 |             INPUT                 
+006 2044 |             STORE TEMP            
+007 A000 |             CLEAR                 
+         |                                  
+008 1040 |  IF         LOAD X                
+009 4001 |             SUBT 001              
+00A 8800 |             SKIPCOND 800          
+00B 9025 |             JUMP STOREFIRST       
+         |                                  
+00C A000 |             CLEAR                 
+00D 1044 |             LOAD TEMP             
+00E 4042 |             SUBT MIN              
+00F 8000 |             SKIPCOND 000          
+010 901D |             JUMP FINDMAX          
+         |                                  
+011 8800 |  ELSE       SKIPCOND 800          
+012 9021 |             JUMP FINDMIN          
+         |                                  
+013 A000 |  CONTINUE   CLEAR                 
+014 1044 |             LOAD TEMP             
+015 3041 |             ADD Y                /add Y to the input
+016 2041 |             STORE Y              /save new value
+017 A000 |             CLEAR                 
+018 1040 |             LOAD X               /INCREMENT COUNTER
+019 303F |             ADD ONE               
+01A 2040 |             STORE X               
+01B A000 |             CLEAR                 
+01C 9000 |             JUMP LOOP            /RESTART LOOP
+         |                                  
+01D A000 |  FINDMAX    CLEAR                 
+01E 1044 |             LOAD TEMP             
+01F 2043 |             STORE MAX             
+020 9013 |             JUMP CONTINUE         
+         |                                  
+021 A000 |  FINDMIN    CLEAR                 
+022 1044 |             LOAD TEMP             
+023 2042 |             STORE MIN             
+024 9013 |             JUMP CONTINUE         
+         |                                  
+025 1044 |  STOREFIRST LOAD TEMP             
+026 2042 |             STORE MIN             
+027 2043 |             STORE MAX             
+028 9013 |             JUMP CONTINUE         
+         |                                  
+029 1041 |  LOOP2      LOAD Y               /LOAD ALL THE ADDED NUMBERS
+02A 8800 |             SKIPCOND 800         /WHEN Y = 0
+02B 9034 |             JUMP PRINT           /GO TO OUTPUT
+         |                                  
+02C 403E |             SUBT TEN             /SUBTRACT 10 UNTIL REACH 0
+02D 2041 |             STORE Y              /STORE NEW NUMBER
+02E A000 |             CLEAR                 
+02F 1045 |             LOAD AVERAGE         /EACH LOOP ADD 1 TO AVERAGE
+030 303F |             ADD ONE               
+031 2045 |             STORE AVERAGE         
+032 A000 |             CLEAR                 
+033 9029 |             JUMP LOOP2            
+         |                                  
+034 1045 |  PRINT      LOAD AVERAGE          
+035 6000 |             OUTPUT                
+036 A000 |             CLEAR                 
+037 1042 |             LOAD MIN              
+038 6000 |             OUTPUT                
+039 A000 |             CLEAR                 
+03A 1043 |             LOAD MAX              
+03B 6000 |             OUTPUT                
+03C A000 |             CLEAR                 
+         |                                  
+03D 7000 |             HALT                  
+         |                                  
+03E 000A |  TEN        DEC 10                
+03F 0001 |  ONE        DEC 1                 
+040 0000 |  X          DEC 0                /USE TO INPUT 10 NUMBERS, COUNTER
+041 0000 |  Y          DEC 0                /ALL NUMBERS INPUT ADDED 
+042 0000 |  MIN        DEC 0                 
+043 0000 |  MAX        DEC 0                 
+044 0000 |  TEMP       DEC 0                 
+045 0000 |  AVERAGE    DEC 0                /AVERAGE OF Y DIVIDED BY X
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ------------------------------------------------------
+          Symbol     | Defined | References 
+         ------------+---------+-------------------------------
+          AVERAGE    |   045   | 02F, 031, 034
+          CONTINUE   |   013   | 020, 024, 028
+          ELSE       |   011   | 
+          FINDMAX    |   01D   | 010
+          FINDMIN    |   021   | 012
+          IF         |   008   | 
+          LOOP       |   000   | 01C
+          LOOP2      |   029   | 003, 033
+          MAX        |   043   | 01F, 027, 03A
+          MIN        |   042   | 00E, 023, 026, 037
+          ONE        |   03F   | 019, 030
+          PRINT      |   034   | 02B
+          STOREFIRST |   025   | 00B
+          TEMP       |   044   | 006, 00D, 014, 01E, 022, 025
+          TEN        |   03E   | 001, 02C
+          X          |   040   | 000, 008, 018, 01A
+          Y          |   041   | 015, 016, 029, 02D
+         ------------------------------------------------------
+
+

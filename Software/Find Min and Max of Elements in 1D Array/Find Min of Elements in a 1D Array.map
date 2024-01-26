@@ -1,0 +1,21 @@
+ ---------------------
+ Symbol     | Location
+ -----------+---------
+ AVERAGE    |   045
+ CONTINUE   |   013
+ ELSE       |   011
+ FINDMAX    |   01D
+ FINDMIN    |   021
+ IF         |   008
+ LOOP       |   000
+ LOOP2      |   029
+ MAX        |   043
+ MIN        |   042
+ ONE        |   03F
+ PRINT      |   034
+ STOREFIRST |   025
+ TEMP       |   044
+ TEN        |   03E
+ X          |   040
+ Y          |   041
+

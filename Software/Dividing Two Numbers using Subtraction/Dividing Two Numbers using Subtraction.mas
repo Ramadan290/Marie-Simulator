@@ -1,0 +1,22 @@
+     Input
+     Store   A
+     Input
+     Store   B
+     Load    A
+     Skipcond 800
+     Jump Endloop
+Loop, Subt    B
+     Store   A
+     Load    X
+     Add     One
+     Store   X
+     Load    A
+     Skipcond    400
+     Jump Loop
+     Load  X
+Endloop, Halt
+
+A,  DEC         0
+B,  DEC         0
+X,  DEC         0
+One, DEC        1

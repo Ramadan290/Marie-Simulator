@@ -1,0 +1,64 @@
+     Assembly listing for: Average of Elements in a 1D Array.mas
+                Assembled: Sat Jun 03 04:55:33 EET 2023
+
+000 101E |  LOOP    LOAD X            /counter
+001 401C |          SUBT TEN           
+002 8000 |          SKIPCOND 000      /if X = 10
+003 900E |          JUMP LOOP2        /start average after X = 10;
+         |                            
+004 A000 |          CLEAR             /BEGIN INPUTING NUMBERS FOR AVERAGE
+005 5000 |          INPUT              
+006 301F |          ADD Y             /add Y to the input
+007 201F |          STORE Y           /save new value
+008 A000 |          CLEAR              
+009 101E |          LOAD X            /INCREMENT COUNTER
+00A 301D |          ADD ONE            
+00B 201E |          STORE X            
+00C A000 |          CLEAR              
+00D 9000 |          JUMP LOOP         /RESTART LOOP
+         |                            
+00E 101F |  LOOP2   LOAD Y            /LOAD ALL THE ADDED NUMBERS
+00F 8800 |          SKIPCOND 800      /WHEN Y = 0
+010 9019 |          JUMP PRINT        /GO TO OUTPUT
+         |                            
+011 401C |          SUBT TEN          /SUBTRACT 10 UNTIL REACH 0
+012 201F |          STORE Y           /STORE NEW NUMBER
+013 A000 |          CLEAR              
+014 1022 |          LOAD AVERAGE      /EACH LOOP ADD 1 TO AVERAGE
+015 301D |          ADD ONE            
+016 2022 |          STORE AVERAGE      
+017 A000 |          CLEAR              
+018 900E |          JUMP LOOP2         
+         |                            
+019 1022 |  PRINT   LOAD AVERAGE       
+01A 6000 |          OUTPUT             
+         |                            
+01B 7000 |          HALT               
+         |                            
+01C 000A |  TEN     DEC 10             
+01D 0001 |  ONE     DEC 1              
+01E 0000 |  X       DEC 0             /USE TO INPUT 10 NUMBERS, COUNTER
+01F 0000 |  Y       DEC 0             /ALL NUMBERS INPUT ADDED 
+020 0000 |  MIN     DEC 0              
+021 0000 |  MAX     DEC 0              
+022 0000 |  AVERAGE DEC 0             /AVERAGE OF Y DIVIDED BY X
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          AVERAGE |   022   | 014, 016, 019
+          LOOP    |   000   | 00D
+          LOOP2   |   00E   | 003, 018
+          MAX     |   021   | 
+          MIN     |   020   | 
+          ONE     |   01D   | 00A, 015
+          PRINT   |   019   | 010
+          TEN     |   01C   | 001, 011
+          X       |   01E   | 000, 009, 00B
+          Y       |   01F   | 006, 007, 00E, 012
+         ---------------------------------------------------
+
+

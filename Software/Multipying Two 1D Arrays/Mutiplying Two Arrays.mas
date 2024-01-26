@@ -1,0 +1,37 @@
+﻿     Load Addr.1
+     Store Ptr.1
+     Load Addr.2
+     Store Ptr.2
+     Load Addr.3 
+     Store Ptr.3
+     Load Num
+     Subt One
+     Store Ctr
+Loop,LoadI Ptr.1
+     multiply Ptr.2
+     StoreI Ptr.3
+     Output
+     Load Ptr.1
+     Add One
+     Store Ptr.1
+     Load Ptr.2
+     Add One
+     Store Ptr.2
+     Load Ptr.3
+     Add One
+     Store Ptr.3
+     Load Ctr
+     Subt One
+     Store Ctr
+     Skipcond 000
+Jumploop,Halt
+
+Addr.1, HEX 0023
+Addr.2, HEX 0024
+Addr.3,HEX  0025
+Ptr.1, HEX  0026
+Ptr.2,HEX  0010
+Ptr.3,HEX  0011
+Num,DEC 3  
+One,DEC 1
+Ctr,DEC 0

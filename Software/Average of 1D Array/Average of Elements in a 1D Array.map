@@ -1,0 +1,14 @@
+ ------------------
+ Symbol  | Location
+ --------+---------
+ AVERAGE |   022
+ LOOP    |   000
+ LOOP2   |   00E
+ MAX     |   021
+ MIN     |   020
+ ONE     |   01D
+ PRINT   |   019
+ TEN     |   01C
+ X       |   01E
+ Y       |   01F
+
